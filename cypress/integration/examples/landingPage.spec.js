@@ -22,11 +22,18 @@ describe('Landing Page', () => {
         cy.get('.make-res-btn').contains('Make Reservation');
     }) 
 
-    it.only('Should display reservation cards', () => {
+    it('Should display reservation cards', () => {
         cy.get('.card-container').find('.card').first().contains('Christie')
         cy.get('.card-container').find('.card').last().contains('Leta')
     })
 
     // Check data input into form
+    it.only('Should start with clear inputs on page load', () => {
+        cy.get('input[placeholder="Name"]').should('have.value', '');
+        cy.get('input[placeholder="Date (mm/dd)"]').should('have.value', '');
+        cy.get('input[placeholder="Time"]').should('have.value', '');
+        cy.get('input[placeholder="Number of guests"]').should('have.value', '');
+    })
+
 
 })
