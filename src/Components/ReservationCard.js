@@ -3,7 +3,7 @@ import '../Styles/ReservationCard.css'
 
 const ReservationCard = ({name, date, time, guestCount, id}) => {
     return (
-        <div className='card'>
+        <div className='card' id='id'>
             <h2>{name}</h2>
             <h3>{date}</h3>
             <h3>{time}</h3>
