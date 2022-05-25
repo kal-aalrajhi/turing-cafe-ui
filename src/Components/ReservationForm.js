@@ -8,7 +8,7 @@ class ReservationForm extends Component {
             name: '',
             date: '',
             time: '',
-            guestCount: ''
+            number: ''
         }
     }
 
@@ -51,9 +51,9 @@ class ReservationForm extends Component {
                 />
                 <input
                     type='text'
-                    name='guestCount'
+                    name='number'
                     placeholder='Number of guests'
-                    value={this.state.guestCount}
+                    value={this.state.number}
                     onChange={(event) => this.handleChange(event)}
                 />
                 <button className='btn' onClick={(event) => {this.makeReservation(event)}}>Make Reservation</button>
