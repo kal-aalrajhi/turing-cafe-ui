@@ -3,6 +3,9 @@
     background-color: white;
     color: #008080;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card > h2 {
@@ -10,9 +13,11 @@
 }
 
 .card > h3 {
+    margin: 1rem 0;
     font-size: 1.7rem;
 }
 
 .card > p {
+    margin: 1rem;
     font-size: 1.4rem;
 }

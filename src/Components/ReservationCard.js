@@ -8,6 +8,7 @@ const ReservationCard = ({name, date, time, guestCount, id}) => {
             <h3>{date}</h3>
             <h3>{time}</h3>
             <p>{`Number of guests: ${guestCount}`}</p>
+            <button>Cancel</button>
         </div>
     );
 }
