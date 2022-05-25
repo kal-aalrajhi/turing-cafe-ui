@@ -11,6 +11,20 @@ class ReservationForm extends Component {
             guestCount: ''
         }
     }
+
+    makeReservation = (event) => {
+        event.preventDefault();
+        const reservation = {
+            id: Date.now(),
+            ...this.state
+        }
+        this.props.addReservation(reservation);
+    }
+
+    handleChange = (event) => {
+        this.setState({ [event.target.name]: event.target.value })
+    }
+
     render() {
         return (
             <form className='res-form'>
@@ -37,8 +51,8 @@ class ReservationForm extends Component {
                 />
                 <input
                     type='text'
-                    name='date'
-                    placeholder='Date (mm/dd)'
+                    name='guestCount'
+                    placeholder='Number of guests'
                     value={this.state.guestCount}
                     onChange={(event) => this.handleChange(event)}
                 />
