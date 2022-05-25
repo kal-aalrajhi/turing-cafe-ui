@@ -28,12 +28,21 @@ describe('Landing Page', () => {
     })
 
     // Check data input into form
-    it.only('Should start with clear inputs on page load', () => {
+    it('Should start with clear inputs on page load', () => {
         cy.get('input[placeholder="Name"]').should('have.value', '');
         cy.get('input[placeholder="Date (mm/dd)"]').should('have.value', '');
         cy.get('input[placeholder="Time"]').should('have.value', '');
         cy.get('input[placeholder="Number of guests"]').should('have.value', '');
     })
 
+    it.only('Should take in input for each input bar and submit a reservation', () => {
+        cy.get('input[placeholder="Name"]').type('Kale');
+        cy.get('input[placeholder="Date (mm/dd)"]').type('04/20');
+        cy.get('input[placeholder="Time"]').type('6:66');
+        cy.get('input[placeholder="Number of guests"]').type('10');
+    
+        cy.get('.make-res-btn').click();
 
+        cy.get('.card-container').find('.card').last().contains('Kale')
+    })
 })
