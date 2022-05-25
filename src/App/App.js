@@ -20,6 +20,10 @@ class App extends Component {
     });
   }
 
+  addReservation = (reservation) => {
+    this.setState({ reservations: [...this.state.reservations, reservation] });
+  }
+
   render() {
     return (
       <div className="App">
