@@ -2,7 +2,8 @@ import React from 'react';
 import ReservationCard from './ReservationCard';
 import '../Styles/ReservationContainer.css'
 
-const ReservationContainer = () => {
+const ReservationContainer = ({ reservations }) => {
+    console.log(reservations)
     return (
         <></>
     );
