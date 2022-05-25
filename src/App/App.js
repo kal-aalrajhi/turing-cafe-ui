@@ -28,7 +28,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          {!this.state.reservations}
+          {!this.state.reservations.length ? <h2>No Reservations Made, Try Making One!</h2> : null}
           <ReservationContainer reservations={this.state.reservations}/>
         </div>
       </div>
