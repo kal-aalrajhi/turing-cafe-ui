@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import fetchResponse from '../apiCalls';
+import ReservationContainer from '../Components/ReservationContainer';
 
 class App extends Component {
   constructor() {
@@ -27,7 +28,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <ReservationContainer />
         </div>
       </div>
     )
