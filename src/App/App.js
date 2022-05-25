@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <ReservationForm />
+          <ReservationForm addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
           {!this.state.reservations.length ? <h2>No Reservations Made, Try Making One!</h2> : null}
