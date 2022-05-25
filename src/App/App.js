@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import fetchResponse from '../apiCalls';
 import ReservationContainer from '../Components/ReservationContainer';
+import ReservationForm from '../Components/ReservationForm';
 
 class App extends Component {
   constructor() {
